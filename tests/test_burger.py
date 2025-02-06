@@ -1,6 +1,4 @@
 from praktikum.burger import Burger
-from praktikum.ingredient import Ingredient
-from praktikum.bun import Bun
 from unittest.mock import Mock
 
 
