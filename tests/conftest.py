@@ -1,4 +1,5 @@
 import pytest
+import data
 from unittest.mock import Mock
 from praktikum.burger import Burger
 from praktikum.ingredient_types import INGREDIENT_TYPE_FILLING, INGREDIENT_TYPE_SAUCE
@@ -31,8 +32,8 @@ def mock_second_ingredient():
 def mock_sause():
     sause = Mock()
     sause.get_type.return_value = INGREDIENT_TYPE_SAUCE
-    sause.get_name.return_value = 'Соус традиционный галактический'
-    sause.get_price.return_value = 15
+    sause.get_name.return_value = data.sause_name
+    sause.get_price.return_value = data.sause_price
     return sause
 
 
@@ -40,7 +41,7 @@ def mock_sause():
 def mock_filling():
     filling = Mock()
     filling.get_type.return_value = INGREDIENT_TYPE_FILLING
-    filling.get_name.return_value = 'Биокотлета из марсианской Магнолии'
-    filling.get_price.return_value = 424
+    filling.get_name.return_value = data.filling_name
+    filling.get_price.return_value = data.filling_price
     return filling
 
