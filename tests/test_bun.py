@@ -1,12 +1,13 @@
 from praktikum.bun import Bun
 import pytest
+import data
 
 
 class TestBun:
     @pytest.mark.parametrize('name, price',
                          [
-                             ['Флюоресцентная булка R2-D3', 988],
-                             ['Краторная булка N-200i', 1255]
+                             [data.first_bun_name, data.first_bun_price],
+                             [data.second_bun_name, data.second_bun_price]
                          ]
     )
     def test_bun_name(self, name, price):
@@ -15,8 +16,8 @@ class TestBun:
 
     @pytest.mark.parametrize('name, price',
                              [
-                                 ['Флюоресцентная булка R2-D3', 988],
-                                 ['Краторная булка N-200i', 1255]
+                                 [data.first_bun_name, data.first_bun_price],
+                                 [data.second_bun_name, data.second_bun_price]
                              ]
     )
     def test_bun_name_price(self, name, price):

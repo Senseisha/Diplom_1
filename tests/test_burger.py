@@ -1,3 +1,6 @@
+import data
+
+
 class TestBurger:
     def test_success_set_buns(self, burger, mock_bun):
         burger.set_buns(mock_bun)
@@ -35,8 +38,8 @@ class TestBurger:
 
     def test_success_get_receipt(self, burger, mock_bun, mock_sause):
 
-        mock_bun.get_name.return_value = 'Флюоресцентная булка R2-D3'
-        mock_bun.get_price.return_value = 988
+        mock_bun.get_name.return_value = data.first_bun_name
+        mock_bun.get_price.return_value = data.first_bun_price
         burger.set_buns(mock_bun)
         burger.add_ingredient(mock_sause)
         expected_result = (
